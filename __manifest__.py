@@ -25,34 +25,30 @@
 ###############################################################################
 
 {
-	'name': 'Impuestos - Colombia',
-	'category': 'Localization',
-	'version': '12.0',
-        'author': 'Odoo LoCo',
-        'license': 'AGPL-3',
-        'maintainer': 'Odoo LoCo',
-        'website': 'https://github.com/odooloco',
-	'summary': 'Impuestos de Colombia: Modulo de Facturacion - Odoo 12.0',
-	'images': ['images/'],
-	'description': """
+    'name': 'Impuestos - Colombia',
+    'category': 'Localization',
+    'version': '12.0',
+    'author': 'Odoo LoCo, Jorels SAS',
+    'license': 'AGPL-3',
+    'maintainer': 'Jorels SAS',
+    'website': 'https://www.jorels.com',
+    'summary': 'Impuestos de Colombia: Modulo de Facturacion - Odoo 12.0',
+    'images': ['images/'],
+    'description': """
 Impuestos Colombia:
 ======================
-	* Este módulo calcula algunos impuestos colombianos que deben aplicarse.
-	* Primer impuesto: retención de impuestos, que se calcula en un 2,4% del monto no tributado y se calcula con el monto total
-	""",
-	'depends': [
-		'account',
-		'sale',
-		'purchase',
-		'l10n_co_res_partner'
-	],
-	'data': [
-		'security/ir.model.access.csv',
-		'views/l10n_co_tax_extension.xml',
-		'views/report_invoice_document_inherit.xml',
-		'views/ir_sequence_view.xml'
-	],
-	'installable': True,
-	'application': True,
-	'auto_install': False,
+    * Este módulo calcula algunos impuestos colombianos que deben aplicarse.
+    * Primer impuesto: retención de impuestos, que se calcula en un 2,4% del monto no tributado y se calcula con el monto total
+    """,
+    'depends': [
+        'account',
+        'l10n_co'
+    ],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/l10n_co_tax_extension.xml',
+    ],
+    'installable': True,
+    'application': False,
+    'auto_install': False,
 }
